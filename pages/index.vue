@@ -314,7 +314,8 @@ export default {
           duration: 1.5,
           delay: 2,
           onComplete: () => {
-            window.location = 'https://github.com/ChristianPastenC';
+            // window.location = 'https://github.com/ChristianPastenC';
+            this.$router.push('/work');
           }
         });
       });
