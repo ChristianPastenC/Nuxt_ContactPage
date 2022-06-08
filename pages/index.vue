@@ -8,9 +8,9 @@
         Christian Pasten
       </h1>
       <p id="text" class="font-exo text-4xl opacity-0" style="transform: translateY(30px)">
-        ONE WITH AN EVERLASTING DESIRE FOR THE UNKNOWN & UNTOLD
+        "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job." – Mosher’s Law of Software Engineering
       </p>
-      <a id="button" href="https://chriscourses.com/"
+      <a id="button" href="https://github.com/ChristianPastenC"
         class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 hover:bg-white hover:text-gray-800 inline-block opacity-0"
         style="transform: translateY(30px)">
         View Work
@@ -58,7 +58,7 @@ import {
   Float32BufferAttribute,
   Points
 } from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 export default {
   mounted() {
     // const dat = require('dat.gui');
@@ -127,7 +127,7 @@ export default {
     renderer.setSize(innerWidth, innerHeight);
     renderer.setPixelRatio(devicePixelRatio);
 
-    new OrbitControls(camera, renderer.domElement);
+    // new OrbitControls(camera, renderer.domElement);
     camera.position.z = 50;
 
     const planeGeometry = new PlaneGeometry(
@@ -207,19 +207,19 @@ export default {
         const { color } = intersects[0].object.geometry.attributes;
 
         // vertex 1
-        color.setX(intersects[0].face.a, 0.1);
-        color.setY(intersects[0].face.a, 0.5);
-        color.setZ(intersects[0].face.a, 1);
+        color.setX(intersects[0].face.a, 0.722);
+        color.setY(intersects[0].face.a, 0.816);
+        color.setZ(intersects[0].face.a, 0.843);
 
         // vertex 2
-        color.setX(intersects[0].face.b, 0.1);
-        color.setY(intersects[0].face.b, 0.5);
-        color.setZ(intersects[0].face.b, 1);
+        color.setX(intersects[0].face.b, 0.722);
+        color.setY(intersects[0].face.b, 0.816);
+        color.setZ(intersects[0].face.b, 0.843);
 
         // vertex 3
-        color.setX(intersects[0].face.c, 0.1);
-        color.setY(intersects[0].face.c, 0.5);
-        color.setZ(intersects[0].face.c, 1);
+        color.setX(intersects[0].face.c, 0.722);
+        color.setY(intersects[0].face.c, 0.816);
+        color.setZ(intersects[0].face.c, 0.843);
 
         intersects[0].object.geometry.attributes.color.needsUpdate = true;
 

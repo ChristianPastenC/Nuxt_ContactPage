@@ -46,12 +46,6 @@ export default {
                 },
                 {
                     image: {
-                        url: imageD
-                    },
-                    title: 'IPHONE'
-                },
-                {
-                    image: {
                         url: imageB
                     },
                     title: 'IPHONE'
@@ -59,12 +53,6 @@ export default {
                 {
                     image: {
                         url: imageC
-                    },
-                    title: 'IPHONE'
-                },
-                {
-                    image: {
-                        url: imageD
                     },
                     title: 'IPHONE'
                 },
