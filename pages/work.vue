@@ -23,8 +23,10 @@
 </style>
 
 <script>
+import imageA from "../assets/unsplash_a.jpg";
 import imageB from "../assets/unsplash_b.jpg";
 import imageC from "../assets/unsplash_c.jpg";
+import imageD from "../assets/unsplash_d.jpg";
 import gsap from "gsap";
 export default {
     data() {
@@ -32,27 +34,27 @@ export default {
             projects: [
                 {
                     image: {
-                        url: imageB
+                        url: imageA
                     },
-                    title: 'IPHONE'
-                },
-                {
-                    image: {
-                        url: imageC
-                    },
-                    title: 'IPHONE'
+                    title: 'GITHUB'
                 },
                 {
                     image: {
                         url: imageB
                     },
-                    title: 'IPHONE'
+                    title: 'LINKEDIN'
                 },
                 {
                     image: {
                         url: imageC
                     },
-                    title: 'IPHONE'
+                    title: 'WHATSAPP'
+                },
+                {
+                    image: {
+                        url: imageD
+                    },
+                    title: 'EMAIL'
                 },
             ]
         }

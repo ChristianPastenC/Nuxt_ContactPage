@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-portfolio',
+    title: 'Contact Me',
     htmlAttrs: {
-      lang: 'es'
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
