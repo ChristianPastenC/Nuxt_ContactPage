@@ -3,9 +3,9 @@
         <h2 class="text-white font-exo text-5xl opacity-0" ref="title" style="transform: translateY(30px);">CONTACT</h2>
         <div class="flex space-x-4">
             <div ref="projects" v-for="project in projects" class="w-full opacity-0">
-                <nuxt-link to="/">
+                <a :href="project.link">
                     <img :src="project.image.url" style="height: 70vh;" class="object-cover" />
-                </nuxt-link>
+                </a>
                 <p class="text-white font-space-mono text-sm">{{ project.title }}</p>
             </div>
         </div>
@@ -36,25 +36,29 @@ export default {
                     image: {
                         url: imageA
                     },
-                    title: 'GITHUB'
+                    title: 'GITHUB',
+                    link: 'https://github.com/ChristianPastenC'
                 },
                 {
                     image: {
                         url: imageB
                     },
-                    title: 'LINKEDIN'
+                    title: 'LINKEDIN',
+                    link: 'https://www.linkedin.com/in/christian-pas-cass'
                 },
                 {
                     image: {
                         url: imageC
                     },
-                    title: 'WHATSAPP'
+                    title: 'WHATSAPP',
+                    link: 'https://wa.me/+522224012809'
                 },
                 {
                     image: {
                         url: imageD
                     },
-                    title: 'EMAIL'
+                    title: 'EMAIL',
+                    link: 'mailto:christian_pasten@outlook.com'
                 },
             ]
         }
