@@ -8,10 +8,9 @@
         Christian Pasten
       </h1>
       <p id="text" class="font-exo text-4xl opacity-0" style="transform: translateY(30px)">
-        "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job." – Mosher’s Law of Software
-        Engineering
+        “Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.” - Eagleson's Law of Programming
       </p>
-      <a id="button" href="https://github.com/ChristianPastenC"
+      <a id="button" href=""
         class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 hover:bg-white hover:text-gray-800 inline-block opacity-0"
         style="transform: translateY(30px)">
         Contact
@@ -66,8 +65,8 @@ export default {
     // const gui = new dat.GUI();
     const world = {
       plane: {
-        width: 400,
-        height: 400,
+        width: 500,
+        height: 500,
         widthSegments: 50,
         heightSegments: 50,
       }
@@ -104,7 +103,7 @@ export default {
 
       const colors = [];
       for (let i = 0; i < planeMesh.geometry.attributes.position.count; i++) {
-        colors.push(0, 0.35, 0.4);
+        colors.push(0, 0.19, 0.4);
       }
 
       planeMesh.geometry.setAttribute(
@@ -207,29 +206,31 @@ export default {
       if (intersects.length > 0) {
         const { color } = intersects[0].object.geometry.attributes;
 
-         // vertex 1
+        // vertex 1
         color.setX(intersects[0].face.a, 0.1);
-        color.setY(intersects[0].face.a, 0.921);
+        color.setY(intersects[0].face.a, 0.5);
         color.setZ(intersects[0].face.a, 1);
+
         // vertex 2
         color.setX(intersects[0].face.b, 0.1);
-        color.setY(intersects[0].face.b, 0.921);
+        color.setY(intersects[0].face.b, 0.5);
         color.setZ(intersects[0].face.b, 1);
+
         // vertex 3
         color.setX(intersects[0].face.c, 0.1);
-        color.setY(intersects[0].face.c, 0.921);
+        color.setY(intersects[0].face.c, 0.5);
         color.setZ(intersects[0].face.c, 1);
 
         intersects[0].object.geometry.attributes.color.needsUpdate = true;
 
         const initialColor = {
           r: 0,
-          g: 0.35,
+          g: 0.19,
           b: 0.4
         }
         const hoverColor = {
           r: 0.1,
-          g: 0.921,
+          g: 0.5,
           b: 1
         }
         gsap.to(hoverColor, {
