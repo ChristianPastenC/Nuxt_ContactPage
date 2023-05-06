@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="flex h-screen bg-black">
-            <div class="w-1/2 flex flex-col justify-center px-8" ref="textContainer">
+            <div class="w-1/4 flex flex-col justify-center px-8" ref="textContainer">
                 <h1 class="font-exo text-white text-4xl mb-8">
                     “If something can go wrong, it will.” - Murphy’s law
                 </h1>
@@ -14,7 +14,7 @@
                     </button>
                 </div>
             </div>
-            <div class="w-1/2" ref="canvasContainer">
+            <div class="w-3/4" ref="canvasContainer">
                 <canvas ref="canvas"></canvas>
             </div>
         </div>
