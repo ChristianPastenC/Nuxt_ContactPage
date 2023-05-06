@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="flex h-screen bg-black">
-            <div class="w-1/4 flex flex-col justify-center px-8">
+            <div class="w-1/2 flex flex-col justify-center px-8" ref="textContainer">
                 <h1 class="font-exo text-white text-4xl mb-8">
-                    dsadsa
+                    “If something can go wrong, it will.” - Murphy’s law
                 </h1>
                 <div>
                     <button @click="navigate()" class="text-white 
@@ -14,7 +14,7 @@
                     </button>
                 </div>
             </div>
-            <div class="w-3/4" ref="canvasContainer">
+            <div class="w-1/2" ref="canvasContainer">
                 <canvas ref="canvas"></canvas>
             </div>
         </div>
@@ -63,6 +63,7 @@ import vertexShader from '../assets/shaders/vertex.glsl';
 import fragmentShader from '../assets/shaders/fragment.glsl';
 import atmosphereVertexShader from '../assets/shaders/atmosphereVertex.glsl';
 import atmosphereFragmentShader from '../assets/shaders/atmosphereFragment.glsl';
+import img from '../assets/img.jpg';
 
 export default {
     methods: {
@@ -73,7 +74,7 @@ export default {
     mounted() {
         const scene = new Scene();
         const camera = new PerspectiveCamera(
-            75,
+            60,
             this.$refs.canvasContainer.offsetWidth / this.$refs.canvasContainer.offsetHeight,
             0.1,
             1000
@@ -95,7 +96,7 @@ export default {
                 fragmentShader,
                 uniforms: {
                     globeTexture: {
-                        value: new TextureLoader().load(require('../assets/img.jpg')),
+                        value: new TextureLoader().load(img),
                     }
                 }
             }),
@@ -174,6 +175,14 @@ export default {
         }
 
         animate();
+
+        gsap.to(this.$refs.textContainer, {
+            opacity: 1,
+            duration: 3,
+            stagger: 0.1,
+            ease: 'expo',
+            delay: 0.2,
+        });
     }
 }
 </script>
