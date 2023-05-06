@@ -66,13 +66,13 @@ export default {
     mounted() {
         gsap.to(this.$refs.title, {
             opacity: 1,
-            duration: 1.5,
+            duration: 3,
             y: 0,
             ease: 'expo',
         });
         gsap.to(this.$refs.projects, {
             opacity: 1,
-            duration: 1.5,
+            duration: 3,
             stagger: 0.1,
             ease: 'expo',
             delay: 0.2,

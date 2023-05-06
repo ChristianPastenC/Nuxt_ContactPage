@@ -3,17 +3,17 @@
     <canvas ref="canvas"></canvas>
     <div id="container" class="absolute text-white text-center w-full max-w-2xl px-6"
       style="top: 50%; transform: translate(-50%, -50%); left: 50%;">
-      <h1 id="name" class="font-space-mono text-sm uppercase tracking-wide opacity-0"
-        style="transform: translateY(30px)">
+      <h1 id="name" class="font-space-mono text-sm uppercase tracking-wide opacity-0" style="transform: translateY(30px)">
         Christian Pasten
       </h1>
       <p id="text" class="font-exo text-4xl opacity-0" style="transform: translateY(30px)">
-        “Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.” - Eagleson's Law of Programming
+        “Any code of your own that you haven't looked at for six or more months might as well have been written by someone
+        else.” - Eagleson's Law of Programming
       </p>
       <a id="button" href=""
         class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 hover:bg-white hover:text-gray-800 inline-block opacity-0"
         style="transform: translateY(30px)">
-        Contact
+        Navigate
       </a>
     </div>
   </div>
@@ -58,11 +58,9 @@ import {
   Float32BufferAttribute,
   Points
 } from 'three';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
 export default {
   mounted() {
-    // const dat = require('dat.gui');
-    // const gui = new dat.GUI();
     const world = {
       plane: {
         width: 500,
@@ -71,10 +69,6 @@ export default {
         heightSegments: 50,
       }
     };
-    // gui.add(world.plane, 'width', 1, 500).onChange(generatePlane);
-    // gui.add(world.plane, 'height', 1, 500).onChange(generatePlane);
-    // gui.add(world.plane, 'widthSegments', 1, 100).onChange(generatePlane);
-    // gui.add(world.plane, 'heightSegments', 1, 100).onChange(generatePlane);
 
     function generatePlane() {
       planeMesh.geometry.dispose();
@@ -127,7 +121,6 @@ export default {
     renderer.setSize(innerWidth, innerHeight);
     renderer.setPixelRatio(devicePixelRatio);
 
-    // new OrbitControls(camera, renderer.domElement);
     camera.position.z = 50;
 
     const planeGeometry = new PlaneGeometry(
@@ -320,7 +313,7 @@ export default {
           delay: 2,
           onComplete: () => {
             // window.location = 'https://github.com/ChristianPastenC';
-            this.$router.push('/work');
+            this.$router.push('/globe');
           }
         });
       });
