@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="flex h-screen bg-black">
-            <div class="w-1/4 flex flex-col justify-center px-8" ref="textContainer">
+    <section class="bg-black">
+        <div class="flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between min-h-screen">
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                 <h1 class="font-exo text-white text-4xl mb-8">
                     “If something can go wrong, it will.” - Murphy’s law
                 </h1>
@@ -14,11 +14,12 @@
                     </button>
                 </div>
             </div>
-            <div class="w-3/4" ref="canvasContainer">
+            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 w-full"
+                ref="canvasContainer">
                 <canvas ref="canvas"></canvas>
             </div>
         </div>
-    </div>
+    </section>
 </template>
   
 <style>
