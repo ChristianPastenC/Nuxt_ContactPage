@@ -14,8 +14,7 @@
                     </button>
                 </div>
             </div>
-            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 w-full"
-                ref="canvasContainer">
+            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 w-full" ref="canvasContainer">
                 <canvas ref="canvas"></canvas>
             </div>
         </div>

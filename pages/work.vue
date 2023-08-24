@@ -25,8 +25,7 @@
 <script>
 import imageA from "../assets/unsplash_a.jpg";
 import imageB from "../assets/unsplash_b.jpg";
-import imageC from "../assets/unsplash_c.jpg";
-import imageD from "../assets/unsplash_d.jpg";
+import imageC from "../assets/unsplash_d.jpg";
 import gsap from "gsap";
 export default {
     data() {
@@ -49,13 +48,6 @@ export default {
                 {
                     image: {
                         url: imageC
-                    },
-                    title: 'WHATSAPP',
-                    link: 'https://wa.me/+522224012809'
-                },
-                {
-                    image: {
-                        url: imageD
                     },
                     title: 'EMAIL',
                     link: 'mailto:christian_pasten@outlook.com'
